@@ -8,7 +8,6 @@ Este repositorio contiene el SDK de Python para la API de HeyTextual.
 ```bash
 pip install heytextual
 ```
-```
 
 ## Uso
 
@@ -28,5 +27,4 @@ documents = heytextual.documents(limit=20)
 document = heytextual.document(document_id="DOCUMENTID")
 
 templates = heytextual.templates(limit=20)
-```
 ```
