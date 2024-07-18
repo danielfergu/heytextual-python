@@ -4,22 +4,29 @@ Este repositorio contiene el SDK de Python para la API de HeyTextual.
 
 ## Installación
 
+```
+```bash
 pip install heytextual
+```
+```
 
 ## Uso
 
 Puedes encontrar más información en la API reference de nuestro website.
 
 Ejemplo:
+```
+```python
+import heytextual
 
-import redacted
+client = heytextual.HeyTextualClient(api_key="your_api_key")
 
-client = redacted.RedactedClient(api_key="your_api_key")
+data = heytextual.extract("/path/to/file", "AUTO")
 
-data = client.extract("/path/to/file", "AUTO")
+documents = heytextual.documents(limit=20)
 
-documents = client.documents(limit=20)
+document = heytextual.document(document_id="DOCUMENTID")
 
-document = client.document(document_id="DOCUMENTID")
-
-templates = client.templates(limit=20)
+templates = heytextual.templates(limit=20)
+```
+```
