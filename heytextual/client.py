@@ -34,7 +34,7 @@ class HeyTextualClient:
 
     def document(self, document_id):
         response = requests.post(
-            f"{self.endpoints.document}/{document_id}",
+            self.endpoints.document,
             headers=self.headers,
             data={'documentId': document_id}
         )
