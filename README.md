@@ -4,7 +4,6 @@ Este repositorio contiene el SDK de Python para la API de HeyTextual.
 
 ## Installación
 
-```
 ```bash
 pip install heytextual
 ```
@@ -14,7 +13,6 @@ pip install heytextual
 Puedes encontrar más información en la API reference de nuestro website.
 
 Ejemplo:
-```
 ```python
 import heytextual
 
