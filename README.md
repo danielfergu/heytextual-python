@@ -18,11 +18,15 @@ import heytextual
 
 client = heytextual.HeyTextualClient(api_key="your_api_key")
 
-data = heytextual.extract("/path/to/file", "AUTO")
+data = client.extract("/path/to/file", "AUTO")
+print(data)
 
-documents = heytextual.documents(limit=20)
+documents = client.documents(limit=20)
+print(documents)
 
-document = heytextual.document(document_id="DOCUMENTID")
+document = client.document(document_id="DOCUMENTID")
+print(document)
 
-templates = heytextual.templates(limit=20)
+templates = client.templates(limit=20)
+print(templates)
 ```

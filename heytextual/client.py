@@ -5,14 +5,13 @@ class HeyTextualClient:
     def __init__(self, api_key):
         self.api_key = api_key
         self.headers = {
-            "Authorization: Bearer {api_key}"
+            "Authorization": f"Bearer {self.api_key}"
         }
-        self.endpoints = Endpoints()
 
     def extract(self, file_path, template_id):
         with open(file_path, 'rb') as file:
             response = requests.post(
-                self.endpoints.extract,
+                Endpoints.extract,
                 headers=self.headers,
                 files={'archivo': file},
                 data={'template': template_id}
@@ -26,7 +25,7 @@ class HeyTextualClient:
             "limit": limit
         }
         response = requests.post(
-            self.endpoints.documents,
+            Endpoints.documents,
             headers=self.headers,
             data=params
         )
@@ -34,7 +33,7 @@ class HeyTextualClient:
 
     def document(self, document_id):
         response = requests.post(
-            self.endpoints.document,
+            Endpoints.document,
             headers=self.headers,
             data={'documentId': document_id}
         )
@@ -43,11 +42,11 @@ class HeyTextualClient:
     def templates(self, start_date=None, end_date=None, limit=None):
         params = {
             "startDate": start_date,
-            "endDate": end_date,
+            "endDate": end date,
             "limit": limit
         }
         response = requests.post(
-            self.endpoints.templates,
+            Endpoints.templates,
             headers=self.headers,
             data=params
         )
