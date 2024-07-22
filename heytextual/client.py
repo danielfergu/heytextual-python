@@ -42,7 +42,7 @@ class Client:
     def templates(self, start_date=None, end_date=None, limit=None):
         params = {
             "startDate": start_date,
-            "endDate": end date,
+            "endDate": end_date,
             "limit": limit
         }
         response = requests.post(
