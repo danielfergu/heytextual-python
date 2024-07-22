@@ -1,1 +1,1 @@
-from .client import HeyTextualClient
+from .client import Client

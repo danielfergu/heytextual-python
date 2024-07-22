@@ -1,7 +1,7 @@
 import requests
 from .endpoints import Endpoints
 
-class HeyTextualClient:
+class Client:
     def __init__(self, api_key):
         self.api_key = api_key
         self.headers = {
@@ -13,7 +13,7 @@ class HeyTextualClient:
             response = requests.post(
                 Endpoints.extract,
                 headers=self.headers,
-                files={'archivo': file},
+                files={'file': file},
                 data={'template': template_id}
             )
         return response.json()
